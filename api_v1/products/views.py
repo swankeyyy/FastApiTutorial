@@ -1,4 +1,3 @@
-
 from fastapi import APIRouter
 from . import crud
 from .schemas import Product, ProductCreate
@@ -6,7 +5,7 @@ from .schemas import Product, ProductCreate
 router = APIRouter(tags=["products"])
 
 
-@router.get("/", response_model=list[Product])  #указывает какой тип вернется
+@router.get("/", response_model=list[Product])  # указывает какой тип вернется
 async def get_products(session):
     return await crud.get_products(session=session)
 
