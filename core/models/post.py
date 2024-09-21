@@ -7,7 +7,7 @@ from .mixins import UserRelationMixin
 if TYPE_CHECKING:
     from .user import (
         User,
-    )  # Чтобы не было циклического импорта, т.к. пост будет портироваться в юзера
+    )  # Чтобы не было циклического импорта, т.к. пост будет импортироваться в юзера
 
 
 class Post(UserRelationMixin, Base):
